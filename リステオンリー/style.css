@@ -1,0 +1,338 @@
+/* =========================================
+   全体設定 (Base)
+   ========================================= */
+body {
+    font-family: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 背景に薄いドット柄を入れてポップにする */
+    background-color: #fff0f5;
+    background-image: radial-gradient(#e91e63 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #444;
+    line-height: 1.8;
+}
+
+a {
+    color: #d81b60;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #880e4f;
+}
+
+/* =========================================
+   ヘッダー (Header)
+   ========================================= */
+header {
+    background: linear-gradient(135deg, #e91e63, #f48fb1); /* グラデーション */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1); /* 文字に影をつける */
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* =========================================
+   ナビゲーション (Navigation)
+   ========================================= */
+nav {
+    background-color: #fff;
+    position: sticky; /* スクロールしても上についてくる */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: #555;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #ffeef4;
+    color: #e91e63;
+}
+
+/* =========================================
+   メインコンテンツ (Main)
+   ========================================= */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* コンテンツをカード風にする */
+section {
+    background: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px; /* 角丸 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* ふんわりした影 */
+}
+
+/* =========================================
+   見出し (Headings)
+   ========================================= */
+/* 大見出しのデザイン（ステッチ風ライン） */
+h2 {
+    text-align: center;
+    color: #e91e63;
+    border-bottom: 2px dashed #e91e63;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/* 小見出しのデザイン（左線アクセント） */
+h3 {
+    background: #fff0f5; /* 薄いピンク背景 */
+    padding: 10px 15px;
+    border-left: 5px solid #e91e63;
+    border-radius: 0 5px 5px 0;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* =========================================
+   パーツ (Components)
+   ========================================= */
+
+/* ニュースリスト */
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+.news-list li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.date {
+    font-weight: bold;
+    color: #e91e63;
+    margin-right: 10px;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 枠線を重ねる */
+    margin-top: 15px;
+    background-color: #fff;
+}
+th, td {
+    border: 1px solid #eee;
+    padding: 15px;
+}
+th {
+    background-color: #ffeef4;
+    color: #e91e63;
+    width: 30%;
+    text-align: left;
+}
+/* タイムテーブル用調整 */
+.timetable th {
+    text-align: center;
+    width: 20%;
+}
+
+/* 注意書きボックス */
+.notice-box {
+    border: 2px solid #e91e63;
+    background-color: #fffafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* 禁止リスト */
+.warning-list li {
+    color: #d32f2f; /* 赤文字 */
+    margin-bottom: 5px;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0; /* 中央寄せ */
+    background: linear-gradient(to right, #e91e63, #f06292);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px; /* 丸いボタン */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+    color: white;
+    transform: translateY(-3px); /* 浮き上がる */
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* マップエリア */
+.map-placeholder {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   サークル一覧 (Circle List - Grid)
+   ========================================= */
+.circle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.circle-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* カード自体の影はsectionでついているが、ここはさらに内側のカード */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 0; /* sectionのpaddingをリセット */
+}
+
+.circle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.circle-header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.space-no {
+    background: white;
+    color: #e91e63;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.circle-name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.circle-img-area {
+    height: 180px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-info {
+    padding: 15px;
+}
+
+.pen-name {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+.comment {
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    height: 3em; /* 2行分くらいで高さを揃える */
+    overflow: hidden;
+}
+
+.circle-link {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.circle-link:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+/* =========================================
+   フッター (Footer)
+   ========================================= */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* =========================================
+   スマホ対応 (Responsive)
+   ========================================= */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.5em; }
+    
+    nav ul { flex-direction: column; }
+    nav li a { border-bottom: 1px solid #f0f0f0; }
+    
+    main { padding: 0 15px; }
+    section { padding: 20px; }
+    
+    th, td {
+        display: block;
+        width: auto;
+    }
+    th {
+        background-color: #e91e63;
+        color: white;
+    }
+}
